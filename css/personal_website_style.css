@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+a {
+    text-decoration: none;
+}
+html{
+
+    background: url(../img/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+    rgba(0,0,0,0.7);
+}
+.page {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: relative;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 100px;
+}
+
+.logo {
+    max-height: 50px;
+    border-radius: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 15px 15px;
+}
+
+nav ul li a {
+    color: ghostwhite;
+    position: relative;
+    padding: 7px 0;
+    font-size: 30px;
+}
+
+nav ul li a:hover {
+    color: #FFFDD0;
+}
+
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #fd4766;
+    transition: 0.5s;
+    bottom: 0;
+}
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+.show_time_left {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 16px 40px;
+    border-radius: 450px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out;
+    background-size: 152% 100%;
+    background: #FFBF00;
+    border: 2px solid #FFD700;
+}
+
+.show_time_left:hover {
+    background: transparent;
+    border-color: #1F51FF;
+    color: 	#FAFA33;
+    font-weight: bold;
+    border-width: thick;
+}
+
+.content a:hover {
+    background: transparent;
+    border-color: #00FFFF;
+    color: #32CD32;
+}
+
+.main_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:"data data data photo photo";
+}
+.content {
+    /*position: absolute;*/
+    /*top: 25%;*/
+    /*left: 8%;*/
+    grid-area: data;
+    margin-left: 20%;
+
+}
+.content .title {
+    color: ghostwhite;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: linear-gradient(
+            120deg,
+            #1c99fe 20.69%,
+            #7644ff 50.19%,
+            #fd4766 79.69%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content h1 {
+    color: snow;
+    font-size: 75px;
+    font-weight: 900;
+    line-height: 90px;
+    text-transform: inherit;
+    width: 70%;
+}
+.content h1 span {
+    color: deepskyblue;
+}
+.content p {
+    width: 55%;
+    color: floralwhite;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.personal_photo{
+    grid-area: photo;
+    text-align: center;
+}
+.personal_photo .my_photo {
+
+    height: 100%;
+    width: 60%;
+    border-radius: 50px;
+}
+
+

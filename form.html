@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/form_style.css">
+  <title>Form</title>
+</head>
+<body onload='document.form.name.focus()'>
+
+<h1>Form</h1>
+<h3>Please fill the form :)</h3>
+<form method="post" action="mailto:vanya.yach2004@gmail.com" name = "form">
+  <h3>Name, Surname</h3>
+  <input type="text"  name="name" value="" placeholder="Please write your name and surname"/>
+  <h3>Gender</h3>
+  Female    <input type = "radio" name = "gender" value ="female"/>
+  Male <input type = "radio" name = "gender" value ="male" checked/>
+
+  <h3>Studies</h3>
+
+  <select  name="Studies">
+    <option>Undergraduate</option>
+    <option>Graduate</option>
+
+  </select>
+
+  <h3>Interests *</h3>
+  <input type = "checkbox" name = "lessons" />"Humanities"<br>
+  <input type = "checkbox" name = "lessons" />"Mathematics"<br>
+  <input type = "checkbox" name = "lessons" />"Bio-chemistry"<br>
+  <input type = "checkbox" name = "lessons" />"Informatics"<br>
+
+
+  <h3>Email*</h3>
+  <input type="email"  name="email"  placeholder="qwerty@gmail.com"  />
+  <h3> Phone number</h3>
+  <input type="text"  name="telephone" placeholder="+370 123 45678" />
+  <h3>Ideas*</h3>
+  <textarea  name="Ideas"
+             placeholder="Your Ideas" onclick="validate_phone_number(document.form.telephone)" >
+        </textarea>
+  <input type="reset"  value="Clear"  id="Reset_button" />
+  <input type="button"  value="ok"  id="ok" onclick="validate_inputs(document.form.email, document.form.telephone)"/>
+
+  <form>
+    <p>Choose date of birth: <input type="date" name="calendar">
+      <input type="submit" class="submit" value="Submit" name = "submit" /></p>
+  </form>
+  Attention:
+  <p>* Fields you have to fill </p>
+</form>
+
+
+<script src="./js/Form_script.js"></script>
+
+</body>
+</html>
